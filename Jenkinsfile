@@ -14,8 +14,7 @@ pipeline
 			{
 			steps
 				{
-					sh 'javac Demo.java'
-					sh 'java Demo'
+					sh "java Demo.java"
 						
 				}
 			}

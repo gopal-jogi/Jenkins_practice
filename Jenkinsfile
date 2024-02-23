@@ -1,21 +1,22 @@
 pipeline
 	{
-		agent any
-		stages
+	agent any
+	stages
+		{
+		stage("GIT")
 			{
-				stage("GIT")
-					{
-					steps
-						{
-							git "https://github.com/gopal-jogi/Jenkins_practice.git"
-						}
-					}
-				stage("Run")
-					{
-					steps
-						{
-							sh Jenkinsfile
-						}
-					}
+			steps
+				{
+					git "https://github.com/gopal-jogi/Jenkins_practice.git"
+				}
 			}
-		
+		stage("Run")
+			{
+			steps
+				{
+					java Demo.java
+						}
+				}
+			}
+		}
+	}
